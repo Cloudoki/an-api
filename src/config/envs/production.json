@@ -1,0 +1,22 @@
+{
+	"server": {
+		"routes": {
+			"cors": {
+				"origin": [
+					"http://bt.cloudoki.com"
+				],
+				"additionalHeaders": [
+					"Accept",
+					"Authorization",
+					"Content-Type",
+					"If-None-Match",
+					"Accept-language"
+				]
+			}
+		}
+	},
+	"plugins": [
+		"./plugins/health",
+		"./plugins/counter"
+	]
+}

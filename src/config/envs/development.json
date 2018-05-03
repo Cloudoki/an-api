@@ -1,0 +1,37 @@
+{
+	"server": {
+		"routes": {
+			"cors": {
+				"origin": [
+					"*"
+				],
+				"additionalHeaders": [
+					"Accept",
+					"Authorization",
+					"Content-Type",
+					"If-None-Match",
+					"Accept-language"
+				]
+			}
+		}
+	},
+	"database": {
+		"options": {
+			"host": "localhost",
+			"port": 3306,
+			"database": "anapi",
+			"user": "root",
+			"password": "cloudoki"
+		}
+	},
+	"plugins": [
+		"inert",
+		"vision",
+		"./plugins/internal/swagger",
+		"./plugins/internal/good",
+		"./plugins/internal/jsdoc",
+		"./plugins/internal/lab",
+		"./plugins/health",
+		"./plugins/counter"
+	]
+}
