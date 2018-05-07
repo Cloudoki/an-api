@@ -13,7 +13,7 @@ exports.counter = {
 			}
 		},
 		payload: joi.object({
-			correct: joi.number().integer().positive().required().example(1)
+			correct: joi.number().integer().min(0).required().example(1)
 		}).label('idInfo')
 	},
 	response: {
@@ -25,9 +25,9 @@ exports.counter = {
 	},
 	handler: async (request, h) => {
 
-		await counterSrvc.plusOne(request.payload.correct)
+		await counterSrvc.plusOne(request.payload.correct + 1)
 
-		const percentage = await counterSrvc.getPercentage(request.payload.correct)
+		const percentage = await counterSrvc.getPercentage(request.payload.correct + 1)
 
 		return h.response(percentage).code(200)
 

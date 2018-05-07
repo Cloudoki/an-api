@@ -3,7 +3,7 @@
 		"routes": {
 			"cors": {
 				"origin": [
-					"http://bt.cloudoki.com"
+					"http://www.budget-game.fiscaliteit.brussels"
 				],
 				"additionalHeaders": [
 					"Accept",
