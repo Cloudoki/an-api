@@ -3,7 +3,8 @@
 		"routes": {
 			"cors": {
 				"origin": [
-					"http://www.budget-game.fiscaliteit.brussels"
+					"http://www.budget-game.fiscaliteit.brussels",
+					"http://budget-game.fiscaliteit.brussels"
 				],
 				"additionalHeaders": [
 					"Accept",
